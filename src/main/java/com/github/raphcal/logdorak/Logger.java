@@ -43,9 +43,20 @@ public class Logger {
 
     /**
      * Creates a new instance for the given class.
+     *
+     * @param clazz Name of the logger.
      */
     public Logger(Class<?> clazz) {
         this.delegate = LoggerFactory.getLogger(clazz);
+    }
+
+    /**
+     * Creates a new instance for the given name.
+     *
+     * @param name Name of the logger.
+     */
+    public Logger(String name) {
+        this.delegate = LoggerFactory.getLogger(name);
     }
 
     /**
